@@ -19,6 +19,39 @@ export default defineType({
         maxLength: 96,
       },
     }),
+    defineField( {
+      name: 'skills',
+      title: 'Skills',
+      type: 'array',
+      
+      of: [
+        {
+          type: 'object',
+          title: 'Title',
+         
+          fields: [
+            {
+              name: 'title',
+              title: 'Title',
+              type: 'string',
+            
+            },
+          ],
+        
+        },
+      ],
+      
+    },),
+    defineField({
+      name: 'facebook',
+      title: 'Facebook',
+      type: 'string',
+    }),
+    defineField({
+      name: 'linkedin',
+      title: 'LinkedIn',
+      type: 'string',
+    }),
     defineField({
       name: 'image',
       title: 'Image',
